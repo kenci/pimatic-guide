@@ -5,7 +5,11 @@ tags: ['guide', page']
 guideOrder: 2020
 ---
 
+<<<<<<< HEAD
 Fork the plugin template on github and clone your forked version into your `node_modules` folder 
+=======
+For the plugin template on github and clone your forked version into your `node_modules` folder 
+>>>>>>> refs/remotes/pimatic/master
 in your `pimatic-dev` directory.
 
 	cd node_modules

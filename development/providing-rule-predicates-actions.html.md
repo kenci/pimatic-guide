@@ -5,19 +5,23 @@ tags: ['guide', page']
 guideOrder: 2070
 ---
 
-###Actions and Predicates
+### Actions and Predicates
 
 Actions and predicates for the rule system are implemented as ActionProvider and PredicateProvider.
 There are some common build in provider in the framework. So in most cases these must not be implemented
 by plugins. But if you need a special provider for a plugin, or a specific action, then you can implement it on your own.
 
 <div class="alert alert-warning">
-	Please note that these API's aren't fix yet and may change in the future without a notice.
+	Please note that these APIs aren't fix yet and may change in the future without a notice.
 </div>
 
-###ActionProvider
+### ActionProvider
 
+<<<<<<< HEAD
 Let's create a simple action provider that answers the question of life, of the universe and everything.
+=======
+Let's create a simple action provider that answers the question of life the universe and everything.
+>>>>>>> refs/remotes/pimatic/master
 
 Each concrete ActionProvider must be a subclass of ActionProvider. The ActionProvider must implement a `parseAction`-function
 that is called for every part of the action string of a rule by the framework. If the ActionHandler can handle
@@ -31,7 +35,11 @@ The returned ActionHandler must be a subclass of an ActionHandler and must imple
 
 <script src="https://gist.github.com/sweetpi/492d63290260823cef6c.js?file=action-handler.coffee"></script>
 
+<<<<<<< HEAD
 The `executeAction`-function should execute the action if `simulate` is `false`. It should allways return a promise
+=======
+The `executeAction`-function should execute the action if `simulate` is `false`. It should always return a promise
+>>>>>>> refs/remotes/pimatic/master
 that gets fulfilled with a description string, after the action was executed.
 
 Finally you have to register your ActionProvider in the framework.
@@ -40,7 +48,7 @@ Finally you have to register your ActionProvider in the framework.
 
 For a more complex example, you can take a look at the [shell-execute Plugin](https://github.com/pimatic/pimatic-shell-execute/blob/master/shell-execute.coffee).
 
-###PredicateProvider
+### PredicateProvider
 
 PredicateProvider follow the same pattern as the ActionProvider, but the function of a PredicateHandler is different.
 Look at the example below, PredicateProvider is true if the value of a numeric expression is 42.
